@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "275345608028",
+    "project_id": "group58-nasr",
+    "storage_bucket": "group58-nasr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275345608028:android:592b64cdac667225194599",
+        "android_client_info": {
+          "package_name": "com.example.group_58_nasr_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhZVkhAamn_QEZIo8JC7Wwyv4otZkPRxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
