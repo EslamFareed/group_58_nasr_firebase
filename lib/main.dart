@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -34,7 +35,33 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  FirebaseMessaging.onMessage.listen((message) {
+    AwesomeNotifications().createNotification(
+      content: NotificationContent(
+        id: 1,
+        channelKey: 'basic_channel',
+        actionType: ActionType.Default,
+        title: message.notification!.title,
+        body: message.notification!.body,
+      ),
+    );
+  });
+
+  FirebaseMessaging.onBackgroundMessage(_handler);
+
   runApp(const MyApp());
+}
+
+Future<void> _handler(RemoteMessage message) async {
+  AwesomeNotifications().createNotification(
+    content: NotificationContent(
+      id: 1,
+      channelKey: 'basic_channel',
+      actionType: ActionType.Default,
+      title: message.notification!.title,
+      body: message.notification!.body,
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

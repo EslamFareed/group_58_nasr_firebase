@@ -15,8 +15,8 @@ class NotificationsScreen extends StatelessWidget {
                 id: 10,
                 channelKey: 'basic_channel',
                 actionType: ActionType.Default,
-                title: 'Hello World!',
-                body: 'This is my first notification!',
+                title: 'Welcome',
+                body: 'Sale 25 % of any product!!!',
               ),
             );
           },
