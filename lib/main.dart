@@ -12,7 +12,7 @@ void main() async {
 
   await AwesomeNotifications().initialize(
     // set the icon to null if you want to use the default app icon
-    null,
+      'resource://mipmap/launcher_icon',
     [
       NotificationChannel(
           channelGroupKey: 'basic_channel_group',
